@@ -2,6 +2,7 @@
 
 #define showLine printf("++++++++++++++++++\n");
 
+
 int main(){
     char fullnme[50];
     char nickname[20];
