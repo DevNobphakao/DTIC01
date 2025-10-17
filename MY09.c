@@ -1,35 +1,31 @@
 #include <stdio.h>
-#define showline printf("-------------------------------\n");
-int main() {
-    float width, length, height;    
-    float wall_area, ceiling_area, total_area;
-    float paint_coverage = 2.75;    
-    float paint_needed;
+#define senpa printf("----------------\n");
 
-    showline
-    printf(" Paint Calculator \n");
-    showline
+int main(){
+    int bus_number;
 
-    printf("Enter room width (m): ");
-    scanf("%f", &width);
+    senpa
+    printf(" Bus Number Information\n");
+    senpa
+    printf("Enter bus number : ");
+    scanf("%d", &bus_number);
+    senpa
+    if(bus_number == 57 ){
+        printf("Go to Pinklao Bangkunnon\n");
+    }else if(bus_number == 3 ){
+        printf("Go to Sanam Luang Ladproao\n");
+    }else if(bus_number == 71 ){
+        printf("Go to Hua Lamphong Yaowarat\n");
+    }else if(bus_number == 56 ){
+        printf("Go to Bang Lamphu Sqphan Krungthon\n");
+    }else if(bus_number == 539 ){
+        printf("Go to Anusawari Chai Samsen\n");
+    }else {
+        printf("No bus number information...T_T\n");
+    }
+    senpa
 
-    printf("Enter room length (m): ");
-    scanf("%f", &length);
-
-    printf("Enter room height (m): ");
-    scanf("%f", &height);
-
-    wall_area = 2 * height * (width + length);
-    ceiling_area = width * length;
-    total_area = wall_area + ceiling_area;
-    paint_needed = total_area / paint_coverage;
-
-    showline
-    printf("Wall area: %.2f sq.m.\n", wall_area);
-    printf("Ceiling area: %.2f sq.m.\n", ceiling_area);
-    printf("Total area to paint: %.2f sq.m.\n", total_area);
-    printf("Paint needed: %.2f gallons\n", paint_needed);
-    showline
 
     return 0;
 }
+

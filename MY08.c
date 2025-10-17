@@ -1,31 +1,28 @@
 #include <stdio.h>
-#include <string.h>
-#define showline printf("------------------------------\n");
+#define showPa printf("---------------------\n");
 
-int main() {
-    char name[100];
-    float height_cm, weight_kg, height_m, bmi;
-
-    showline
-    printf("BMI Calculator Program\n");
-    showline
-
-    printf("Enter name: ");
-    fgets(name, sizeof(name), stdin);
-    name[strcspn(name, "\n")] = 0; 
-
-    printf("Enter height (cm): ");
-    scanf("%f", &height_cm);
-
-    printf("Enter weight (kg): ");
-    scanf("%f", &weight_kg);
-    
-    showline
-    height_m = height_cm / 100.0;
-    bmi = weight_kg / (height_m * height_m);
-    printf("\nname: %s\n", name);
-    printf("BMI calculated: %.2f\n", bmi);
-    showline
+int main(){
+        char pro_id[5], pro_name[50];
+        float pro_price, pro_sale;
+        
+        showPa
+        printf(" Calcuate Product Sale\n");
+        showPa
+        
+        printf("Enter product code : ");
+        scanf("%s", &pro_id);
+        printf("Enter product name : ");
+        scanf("%s", &pro_name);
+        printf("Enter product price : ");
+        scanf("%s", &pro_price);
+        showPa
+        if(pro_price < 1000){
+            pro_sale = pro_price - (pro_price * 3 / 100.0);
+        }else{
+            pro_sale = pro_price - (pro_price * 5 / 100.0);
+        }
+        printf("Product sale : %.2f\n", pro_sale);
+        showPa
 
     return 0;
 }
